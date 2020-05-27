@@ -6,6 +6,7 @@ const mockCatCry = 'nyaaa-';
 const mock = {
   cry: jest.fn().mockReturnValue(mockCatCry)
 };
+// https://stackoverflow.com/questions/43697455/how-to-mock-replace-getter-function-of-object-with-jest#answer-43744255
 Object.defineProperty(mock, 'name', {
   get: jest.fn(() => mockCatName)
 });
